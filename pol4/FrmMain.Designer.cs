@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
@@ -42,24 +41,10 @@
             this.skinTabPage7 = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage8 = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage9 = new CCWin.SkinControl.SkinTabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.skinTabControl1.SuspendLayout();
             this.skinTabPage1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // imageList
-            // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "shishijianting.png");
-            this.imageList.Images.SetKeyName(1, "wuranfenbu.png");
-            this.imageList.Images.SetKeyName(2, "wuransuyuan.png");
-            this.imageList.Images.SetKeyName(3, "wuranyuce.png");
-            this.imageList.Images.SetKeyName(4, "shujuchaxun.png");
-            this.imageList.Images.SetKeyName(5, "xitongshezhi.png");
-            this.imageList.Images.SetKeyName(6, "shijianqiepian.png");
-            this.imageList.Images.SetKeyName(7, "chengshiyingyong.png");
-            this.imageList.Images.SetKeyName(8, "yayuntuoguan.png");
             // 
             // skinTabControl1
             // 
@@ -78,7 +63,7 @@
             this.skinTabControl1.Controls.Add(this.skinTabPage8);
             this.skinTabControl1.Controls.Add(this.skinTabPage9);
             this.skinTabControl1.HeadBack = null;
-            this.skinTabControl1.ImageList = this.imageList1;
+            this.skinTabControl1.ImageList = this.imageList;
             this.skinTabControl1.ImgSize = new System.Drawing.Size(50, 50);
             this.skinTabControl1.ImgTxtOffset = new System.Drawing.Point(0, 0);
             this.skinTabControl1.ImgTxtSpace = 0;
@@ -95,7 +80,7 @@
             this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.skinTabControl1.PageNorml = null;
             this.skinTabControl1.PageTextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.skinTabControl1.SelectedIndex = 0;
+            this.skinTabControl1.SelectedIndex = 2;
             this.skinTabControl1.Size = new System.Drawing.Size(1100, 700);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 0;
@@ -238,19 +223,19 @@
             this.skinTabPage9.TabItemImage = null;
             this.skinTabPage9.Text = "亚运托管";
             // 
-            // imageList1
+            // imageList
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "shishijianting.png");
-            this.imageList1.Images.SetKeyName(1, "wuranfenbu.png");
-            this.imageList1.Images.SetKeyName(2, "wuransuyuan.png");
-            this.imageList1.Images.SetKeyName(3, "wuranyuce.png");
-            this.imageList1.Images.SetKeyName(4, "shujuchaxun.png");
-            this.imageList1.Images.SetKeyName(5, "xitongshezhi.png");
-            this.imageList1.Images.SetKeyName(6, "shijianqiepian.png");
-            this.imageList1.Images.SetKeyName(7, "chengshiyingyong.png");
-            this.imageList1.Images.SetKeyName(8, "yayuntuoguan.png");
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "shishijianting.png");
+            this.imageList.Images.SetKeyName(1, "wuranfenbu.png");
+            this.imageList.Images.SetKeyName(2, "wuransuyuan.png");
+            this.imageList.Images.SetKeyName(3, "wuranyuce.png");
+            this.imageList.Images.SetKeyName(4, "shujuchaxun.png");
+            this.imageList.Images.SetKeyName(5, "xitongshezhi.png");
+            this.imageList.Images.SetKeyName(6, "shijianqiepian.png");
+            this.imageList.Images.SetKeyName(7, "chengshiyingyong.png");
+            this.imageList.Images.SetKeyName(8, "yayuntuoguan.png");
             // 
             // FrmMain
             // 
@@ -288,8 +273,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ImageList imageList;
         private CCWin.SkinControl.SkinTabControl skinTabControl1;
         private CCWin.SkinControl.SkinTabPage skinTabPage1;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
@@ -301,7 +284,7 @@
         private CCWin.SkinControl.SkinTabPage skinTabPage7;
         private CCWin.SkinControl.SkinTabPage skinTabPage8;
         private CCWin.SkinControl.SkinTabPage skinTabPage9;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageList;
     }
 }
 

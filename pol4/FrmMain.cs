@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using CCWin.SkinClass;
 
 namespace pol4
 {
@@ -32,6 +34,32 @@ namespace pol4
             gMapControl1.DragButton = MouseButtons.Left;//左键拖动地图
             //this.gMapControl1.Overlays.Add(overlay_Wind_1);//将图层添加到地图
             GMapProvider.TimeoutMs = 1000;//设置超时时间
+
+
+            // 连接字符串
+            //string connectionString = "Data Source=(local);Initial Catalog=Pol;Integrated Security=True";
+            string connectionString = "Server=127.0.0.1,1433;Database=Pol;User Id=sa;Password=2047806;";
+
+            // 查询语句
+            string query = "SELECT * FROM bj_data WHERE date='2017-01-01 00:00'";
+
+            // 创建连接对象和命令对象
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                // 打开连接
+                connection.Open();
+
+                // 执行查询并获取结果
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Console.WriteLine("{0}\t{1}\t{2}", reader.GetDateTime(0), reader.GetDouble(1), reader.GetDouble(2));
+                    }
+                }
+
+            }
         }
     }
 }
